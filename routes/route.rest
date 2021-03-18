@@ -1,0 +1,49 @@
+// 16.3.1.4, Create the Get-all req + test for the res.send output
+
+// GET ALL
+GET http://localhost:3000/subscribers
+
+// 16.3.1.5, Use the 3 hashtags to sepearte the reqs
+
+###
+
+// GET ONE 
+
+GET http://localhost:3000/subscribers/60525206a484a12ebc454e92
+
+
+
+
+
+###
+
+// 37. Create the POST via a) specifying the http, b) specify the Content Type: "Content-Type: application/json", c) specify the blank line, d) specifying the JSON data
+
+// 38. Check that the data is sent correctly and check that the data isn't sent whenever one of the required fields isn't filled
+
+// POST ONE
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Peter",
+    "subscribedToChannel": "WDS"
+}
+
+### 
+
+// PATCH ONE
+
+PATCH http://localhost:3000/subscribers/60535cb9c7feb8289c84d3e0
+Content-Type: application/json
+
+{
+    "name": "Kate"
+}
+
+###
+
+// DELETE ONE
+
+DELETE http://localhost:3000/subscribers/605251e3a484a12ebc454e90
